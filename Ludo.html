@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ludo Layout</title>
+		<style>
+			#outer
+			{
+				height:750px;
+				width:750px;
+				border:5px solid;
+			}
+			#up
+			{
+				height:300px;
+				width:750px;
+			}
+			#middle
+			{
+				height:150px;
+				width:750px;
+			}
+			#down
+			{
+				height:300px;
+				width:750px;
+			}
+			#uleft
+			{
+				height:296px;
+				width:296px;
+				float:left;
+				background-color:red;
+				border:2px solid;
+			}
+			#ucenter
+			{
+				height:300px;
+				width:150px;
+				float:left;
+			}
+			#uright
+			{
+				height:296px;
+				width:296px;
+				float:left;
+				background-color:green;
+				border:2px solid;
+			}
+			#ulleft
+			{
+				height:196px;
+				width:196px;
+				float:left;
+				background-color:white;
+				margin-top:50px;
+				margin-left:50px;
+				border:2px solid;
+			}
+			#urright
+			{
+				height:196px;
+				width:196px;
+				float:right;
+				background-color:white;
+				margin-top:50px;
+				margin-right:50px;
+				border:2px solid;
+			}
+			.ucrow
+			{
+				height:50px;
+				width:150px;
+			}
+			.box
+			{
+				height:46px;
+				width:46px;
+				float:left;
+				background-color:white;
+				border:2px solid;
+			}
+			.box1
+			{
+				height:46px;
+				width:46px;
+				float:left;
+				background-color:green;
+				border:2px solid;
+			}
+			b
+			{
+				font-size:60px;
+			}
+			#mleft
+			{
+				height:150px;
+				width:300px;
+				float:left;
+			}
+			.mlrow,.mrrow
+			{
+				height:50px;
+				width:300px;
+			}
+			.box2
+			{
+				height:46px;
+				width:46px;
+				float:left;
+				background-color:red;
+				border:2px solid;
+			}
+			#mcenter
+			{
+				float:left;
+				border-top:75px solid green;
+				border-right:75px solid yellow;
+				border-bottom:75px solid blue;
+				border-left:75px solid red;
+			}
+			#mright
+			{
+				height:150px;
+				width:300px;
+				float:left;
+			}
+			.box3
+			{
+				height:46px;
+				width:46px;
+				float:left;
+				background-color:yellow;
+				border:2px solid;
+			}
+			#dleft
+			{
+				height:296px;
+				width:296px;
+				float:left;
+				background-color:blue;
+				border:2px solid;
+			}
+			#dcenter
+			{
+				height:300px;
+				width:150px;
+				float:left;
+			}
+			#dright
+			{
+				height:296px;
+				width:296px;
+				float:left;
+				background-color:yellow;
+				border:2px solid;
+			}
+			#dlleft
+			{
+				height:196px;
+				width:196px;
+				float:left;
+				background-color:white;
+				margin-top:50px;
+				margin-left:50px;
+				border:2px solid;
+			}
+			#drright
+			{
+				height:196px;
+				width:196px;
+				float:right;
+				background-color:white;
+				margin-top:50px;
+				margin-right:50px;
+				border:2px solid;
+			}
+			.box4
+			{
+				height:46px;
+				width:46px;
+				float:left;
+				background-color:blue;
+				border:2px solid;
+			}
+			#ul1
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:red;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#ul2
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:red;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#ul3
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:red;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#ul4
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:red;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#ur1
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:green;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#ur2
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:green;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#ur3
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:green;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#ur4
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:green;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#dl1
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:blue;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#dl2
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:blue;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#dl3
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:blue;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#dl4
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:blue;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#dr1
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:yellow;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#dr2
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:yellow;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#dr3
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:yellow;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+			#dr4
+			{
+				height:46px;
+				width:46px;
+				border-radius:50%;
+				background-color:yellow;
+				float:left;
+				border:2px solid;
+				margin-top:28px;
+				margin-left:28px;
+			}
+		</style>
+	</head>
+	<body>
+	<center>
+		<div id="outer">
+			<div id="up">
+				<div id="uleft">
+					<div id="ulleft">
+						<div id="ul1">
+						</div>
+						<div id="ul2">
+						</div>
+						<div id="ul3">
+						</div>
+						<div id="ul4">
+						</div>
+					</div>
+				</div>
+				<div id="ucenter">
+					<div class="ucrow">
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+					<div class="ucrow">
+						<div class="box">
+						</div>
+						<div class="box1">
+						</div>
+						<div class="box1">
+							<b>*</b>
+						</div>
+					</div>
+					<div class="ucrow">
+						<div class="box">
+							<b>*</b>
+						</div>
+						<div class="box1">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+					<div class="ucrow">
+						<div class="box">
+						</div>
+						<div class="box1">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+					<div class="ucrow">
+						<div class="box">
+						</div>
+						<div class="box1">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+					<div class="ucrow">
+						<div class="box">
+						</div>
+						<div class="box1">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+				</div>
+				<div id="uright">
+					<div id="urright">
+						<div id="ur1">
+						</div>
+						<div id="ur2">
+						</div>
+						<div id="ur3">
+						</div>
+						<div id="ur4">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="middle">
+				<div id="mleft">
+					<div class="mlrow">
+						<div class="box">
+						</div>
+						<div class="box2">
+							<b>*</b>
+						</div>
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+					<div class="mlrow">
+						<div class="box">
+						</div>
+						<div class="box2">
+						</div>
+						<div class="box2">
+						</div>
+						<div class="box2">
+						</div>
+						<div class="box2">
+						</div>
+						<div class="box2">
+						</div>
+					</div>
+					<div class="mlrow">
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+						<div class="box">
+							<b>*</b>
+						</div>
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+				</div>
+				<div id="mcenter">
+				</div>
+				<div id="mright">
+					<div class="mrrow">
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+						<div class="box">
+							<b>*</b>
+						</div>
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+					<div class="mrrow">
+						<div class="box3">
+						</div>
+						<div class="box3">
+						</div>
+						<div class="box3">
+						</div>
+						<div class="box3">
+						</div>
+						<div class="box3">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+					<div class="mrrow">
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+						<div class="box3">
+							<b>*</b>
+						</div>
+						<div class="box">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="down">
+				<div id="dleft">
+					<div id="dlleft">
+						<div id="dl1">
+						</div>
+						<div id="dl2">
+						</div>
+						<div id="dl3">
+						</div>
+						<div id="dl4">
+						</div>
+					</div>
+				</div>
+				<div id="dcenter">
+					<div class="dcrow">
+						<div class="box">
+						</div>
+						<div class="box4">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+					<div class="dcrow">
+						<div class="box">
+						</div>
+						<div class="box4">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+					<div class="dcrow">
+						<div class="box">
+						</div>
+						<div class="box4">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+					<div class="dcrow">
+						<div class="box">
+						</div>
+						<div class="box4">
+						</div>
+						<div class="box">
+							<b>*</b>
+						</div>
+					</div>
+					<div class="dcrow">
+						<div class="box4">
+							<b>*</b>
+						</div>
+						<div class="box4">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+					<div class="dcrow">
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+						<div class="box">
+						</div>
+					</div>
+				</div>
+				<div id="dright">
+					<div id="drright">
+						<div id="dr1">
+						</div>
+						<div id="dr2">
+						</div>
+						<div id="dr3">
+						</div>
+						<div id="dr4">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</center>
+	</body>
+</html>
